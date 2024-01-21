@@ -42,6 +42,11 @@ const Login = () => {
       const json = await response.json();
       console.log(json);
 
+      const accessToken = json.access_token;
+
+    // Save the access token to local storage
+    localStorage.setItem('accessToken', accessToken);
+    window.location.href = '/';
       // Handle successful login here, e.g., store tokens, redirect, etc.
 
     } catch (error) {
