@@ -38,6 +38,8 @@ const RegistrationComponent = () => {
       console.log("Response Headers:", response.headers);
       const responseContent = await response.text();
       console.log("Response Content:", responseContent);
+
+      window.location.href = '/login';
   
       // Rest of the code...
     } catch (error) {
